@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .active-tab {
+      border-bottom: 2px solid black;
+      color: black;
+    }
+    .inactive-tab {
+      color: gray;
+    }
+    .navbar-transparent {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="bg-white text-black font-sans">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 w-full bg-white shadow-md z-50 transition-all">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">Portfolio</h1>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:text-gray-500">Home</a></li>
+        <li><a href="#about" class="hover:text-gray-500">About</a></li>
+        <li><a href="#my-works" class="hover:text-gray-500">My Works</a></li>
+        <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+      </ul>
+      <!-- Hamburger Button -->
+      <button id="hamburger-btn" class="md:hidden">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <ul>
+        <li><a href="#home" class="block py-2 px-4">Home</a></li>
+        <li><a href="#about" class="block py-2 px-4">About</a></li>
+        <li><a href="#my-works" class="block py-2 px-4">My Works</a></li>
+        <li><a href="#contact" class="block py-2 px-4">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ <!-- Hero Section -->
+<section id="home" class="h-screen flex items-center justify-center border-b border-gray-200">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-center">
+    <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
+      <img src="Picture/pp.jpeg" alt="My Photo" class="rounded-full w-48 h-48 md:w-64 md:h-64 shadow-md">
+    </div>
+    <div class="md:w-1/2 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Hello!!!</h1>
+      <p class="text-sm md:text-xl">I’m Web Developer and UI/UX, call me Iqbal.
+        Hope you love my design and artwork. Thank you
+        for your attention!</p>
+      <a href="porto.pdf" download class="mt-6 inline-block px-6 py-3 border border-black rounded hover:bg-black hover:text-white">
+        Download My Portfolio
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-24 border-b border-gray-200 relative">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">About Me</h2>
+        <div class="mx-auto max-w-prose">
+          <p class="text-xs md:text-sm leading-relaxed">
+            I am an enthusiastic and passionate individual with a deep interest in web development and UI/UX design. Crafting intuitive, visually appealing, and user-friendly websites has always been my focus. I thrive on turning creative ideas into functional designs that enhance user experiences and meet business objectives.
+          </p>
+          <p class="text-xs md:text-sm leading-relaxed mt-4">
+            With a strong foundation in web design principles and a keen eye for detail, I am dedicated to ensuring every project I work on is not only technically sound but also visually engaging. I enjoy exploring innovative approaches to design and stay updated with the latest trends and technologies in the web development and UI/UX field.
+          </p>
+          <p class="text-xs md:text-sm leading-relaxed mt-4">
+            My experiences have allowed me to refine my skills in creating websites that effectively combine aesthetics and functionality. Whether it's designing layouts, optimizing user journeys, or developing responsive interfaces, I always strive to deliver solutions that resonate with the target audience.
+          </p>
+          <p class="text-xs md:text-sm leading-relaxed mt-4">
+            Driven by curiosity and a constant desire to learn, I find joy in overcoming challenges and collaborating with others to bring projects to life. My goal is to contribute to impactful digital experiences that leave a lasting impression and provide real value to users.
+          </p>
+        </div>    
+      </div>
+      <!-- GIF Element -->
+      <img 
+        src="https://media.tenor.com/4noHdLpBCgEAAAAi/cat-pop-pop-pop.gif" 
+        alt="Pop Cat GIF" 
+        class="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 mb-0"
+      />
+    </section>
+    
+
+
+  <!-- MY Works Section -->
+  <section id="my-works" class="py-20 border-b border-gray-200">
+    <div class="container mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">My Works</h2>
+      <div class="flex flex-col md:flex-row">
+        <!-- Tabs -->
+        <div class="w-full md:w-1/4 flex md:flex-col text-center md:text-left">
+          <button class="tab-button active-tab py-2 px-4 md:px-0 md:py-4" data-tab="tab1">Project 1</button>
+          <button class="tab-button inactive-tab py-2 px-4 md:px-0 md:py-4" data-tab="tab2">Project 2</button>
+          <button class="tab-button inactive-tab py-2 px-4 md:px-0 md:py-4" data-tab="tab3">Project 3</button>
+          <button class="tab-button inactive-tab py-2 px-4 md:px-0 md:py-4" data-tab="tab4">Project 4</button>
+        </div>
+        <!-- Content -->
+        <div class="w-full md:w-3/4 p-4">
+          <div id="tab1" class="tab-content">
+            <h3 class="text-lg font-bold">Seashell</h3>
+            <p class="text-sm text-gray-600">Italian Cuisine Recipes | February - March 2024</p>
+            <ul class="list-disc ml-5 mt-4">
+              <li>Developed as part of a mid-term project assigned by the lecturer. Tasked with creating, organizing, and presenting authentic Italian recipes.</li>
+              <li>Focused on creating, organizing, and presenting authentic Italian recipes to enhance accessibility and user experience.</li>
+            </ul>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-1 gap-4">
+              <img src="Picture/1.png" alt="Project 1" class="rounded shadow-md w-full h-auto">
+            </div>            
+          </div>
+
+          <div id="tab2" class="tab-content hidden">
+            <h3 class="text-lg font-bold">Freelance SI-FEST</h3>
+            <p class="text-sm text-gray-600">HIMSI FASILKOM UNSRI | June - September 2024</p>
+            <ul class="list-disc ml-5 mt-4">
+              <li>Collaborated on a project under the organization HIMSI FASILKOM UNSRI.</li>
+              <li>Key contributions included developing and managing a platform for freelance opportunities during SI-FEST 2024.</li>
+            </ul>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-1 gap-4">
+              <img src="Picture/2.png" alt="Project 2" class="rounded shadow-md w-full h-auto project-img">
+            </div>
+          </div>
+          
+          <div id="tab3" class="tab-content hidden">
+            <h3 class="text-lg font-bold">SI-FEST</h3>
+            <p class="text-sm text-gray-600">HIMSI FASILKOM UNSRI | September - November 2024</p>
+            <ul class="list-disc ml-5 mt-4">
+              <li>Developed a responsive and user-friendly website for SI FEST, a national-scale event organized by HIMSI FASILKOM UNSRI.</li>
+              <li>The website focused on providing insights into 5.0 technology, showcasing event details, registration for competitions, and creating an interactive experience for attendees and participants.</li>
+            </ul>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-1 gap-4">
+              <img src="Picture/3.png" alt="Project 3" class="rounded shadow-md w-full h-auto project-img">
+            </div>
+          </div>  
+          
+          <div id="tab4" class="tab-content hidden">
+            <h3 class="text-lg font-bold">BuddyPlanner</h3>
+            <p class="text-sm text-gray-600">Software Engineering Course Project | November - December 2024</p>
+            <ul class="list-disc ml-5 mt-4">
+              <li>Developed a time reminder application where users can input tasks, mark them as completed, and receive time-based notifications.</li>
+              <li>Collaborated with teammates as part of the final project for the Software Engineering course (UAS).</li>
+            </ul>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-1 gap-4">
+              <img src="Picture/4.png" alt="Project 4" class="rounded shadow-md w-full h-auto project-img">
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Contact Me</h2>
+      <div class="flex flex-col items-center space-y-4">
+        <p class="flex items-center space-x-2">
+          <i class="fas fa-envelope text-xl"></i>
+          <span>Email: <a href="mailto:: muhammadiqbalulkhoiri2@gmail.com" class="underline">muhammadiqbalulkhoiri2@gmail.com</a></span>
+        </p>
+        <p class="flex items-center space-x-2">
+          <i class="fab fa-linkedin text-xl"></i>
+          <span>LinkedIn: <a href="https://www.linkedin.com/in/iqbalul-khoiri-0a84b0313/" class="underline">Iqbalul Khoiri</a></span>
+        </p>
+        <p class="flex items-center space-x-2">
+          <i class="fab fa-instagram text-xl"></i>
+          <span>Instagram: <a href="https://www.instagram.com/m_iqbalul.027/" class="underline">@m_iqbaul.027</a></span>
+        </p>
+        <p class="flex items-center space-x-2">
+          <i class="fas fa-phone text-xl"></i>
+          <span>Phone: <a href="tel:+628971769857" class="underline">0897-1769-857</a></span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+     <!-- Footer -->
+<footer class="bg-gray-900 text-white py-1">
+  <div class="container mx-auto flex justify-end items-center space-x-4">
+    <a href="mailto:muhammadiqbalulkhoiri2@gmail.com" class="text-white hover:text-gray-400 flex items-center space-x-2">
+      <i class="fas fa-envelope text-xl"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/iqbalul-khoiri-0a84b0313/" target="_blank" class="text-white hover:text-gray-400">
+      <i class="fab fa-linkedin-in text-xl"></i>
+    </a>
+    <a href="https://www.instagram.com/m_iqbalul.027/" target="_blank" class="text-white hover:text-gray-400">
+      <i class="fab fa-instagram text-xl"></i>
+    </a>
+    <a href="tel:+628971769857" class="text-white hover:text-gray-400 flex items-center space-x-2">
+      <i class="fas fa-phone text-xl"></i>
+    </a>
+  </div>
+</footer>
+
+
+
+
+  <script>
+    // Change navbar background on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('navbar-transparent');
+      } else {
+        navbar.classList.remove('navbar-transparent');
+      }
+    });
+
+    // Tab functionality
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        // Remove active state from all tabs
+        tabs.forEach(t => t.classList.remove('active-tab'));
+        tabs.forEach(t => t.classList.add('inactive-tab'));
+        
+        // Hide all content
+        contents.forEach(content => content.classList.add('hidden'));
+
+        // Activate clicked tab and show corresponding content
+        tab.classList.add('active-tab');
+        tab.classList.remove('inactive-tab');
+        document.getElementById(tab.dataset.tab).classList.remove('hidden');
+      });
+    });
+
+      // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Show and hide the menu when the hamburger button is clicked
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close the menu when clicking outside of the menu
+    window.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close the menu when any menu item is clicked
+    const menuItems = mobileMenu.querySelectorAll('a'); // Get all menu items
+
+    menuItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden'); // Hide the menu after selecting an item
+      });
+    });
+  </script>
+
+</body>
+</html>
